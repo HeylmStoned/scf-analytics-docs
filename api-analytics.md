@@ -25,7 +25,9 @@ sequenceDiagram
 | `service.name` | Which service inside that project. |
 | `http.route` | Endpoint, after normalization. |
 | `http.response.status_code` | Success vs error. |
-| latency | p50 and p95 from a histogram. |
+| latency | p50 and p95 from a fixed histogram. |
+
+The histogram buckets are fixed at 5, 10, 25, 50, 100, 250, 500, 1000, 2500, 5000, and 10000 ms. p50 and p95 are the ceiling of the bucket a call falls in, so a 40 ms call is reported as 50 ms.
 
 The normalizer is a fixed rule list in code. No tenant UI for custom rules. It rewrites numeric ids, UUIDs, hex hashes, Stellar `G…`, `C…`, and `M…` addresses, and trailing slashes to placeholders. A team that wants a cleaner name sets `http.route` in its own middleware.
 
