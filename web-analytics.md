@@ -12,7 +12,7 @@ sequenceDiagram
   Page->>JS: script tag, exact version, SRI hash
   JS->>JS: run in the page, read path and referrer
   JS->>In: POST /s/e with browser Sec-Fetch headers
-  In->>In: reject non-browser posts and known bots
+  In->>In: drop known bots, and posts with no Origin or Sec-Fetch headers
   In->>In: country from truncated IP, then discard the IP
   In->>DB: page view, referrer, country, device, browser
 ```
