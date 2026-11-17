@@ -1,0 +1,12 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Web and API Analytics
+  structure:
+    - type: space
+      key: scf-analytics
+      title: Web and API Analytics
+      path: analytics
+      default: true
+      content:
+        directory: ./
+        language: en
