@@ -1,6 +1,6 @@
 # Privacy and compliance
 
-Data sits in **Frankfurt**. The goal is GDPR and UK PECR compliance **without** a cookie banner.
+Supabase offers all of their regions, and each project chooses where its data is stored. The goal is GDPR and UK PECR compliance **without** a cookie banner.
 
 * No cookies, no `localStorage`, no `sessionStorage`.
 * Stock Umami can store city, region, and ad click ids such as `gclid`. The fork keeps country and does not store city, region, or those click ids.
