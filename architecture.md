@@ -23,7 +23,7 @@ flowchart TB
     Keys["Operator API keys<br/>create and revoke"]
   end
 
-  subgraph Data["Supabase Postgres<br/>region chosen by the project"]
+  subgraph Data["Supabase Postgres<br/>one project per residency region"]
     WebDb[("Web aggregates")]
     ApiDb[("API aggregates<br/>24 months")]
     Rls["Row-level security<br/>tenant_id"]
