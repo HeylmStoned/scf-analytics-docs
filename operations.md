@@ -1,27 +1,31 @@
 # Operations and handover
 
-Commitments for the 12 months after the final development tranche is approved:
+Commitments for the 12 months after the final development tranche is approved. The same numbers are published here and in the repository README.
 
-| Target | Commitment |
-| --- | --- |
-| Ingest availability | 99.9% (explicit deviation from RFP 99.99% ingest — see below) |
-| Dashboard availability | 99.9% (matches RFP 99.90%) |
-| Critical and high vulnerabilities | Patched within 24 hours |
-| Support | GitHub issues. Reply in 5 business days, closed in 10. |
+| Target | RFP | Our commitment |
+| --- | --- | --- |
+| Data collection (ingest) availability | 99.99% | **99.9%** |
+| Dashboard availability | 99.90% | **99.9%** |
+| Critical and high vulnerability remediation | 24 hours | **24 hours** |
+| Support: initial response, then resolution | 5 then 10 business days | **5 then 10 business days** |
 
-**Deviation from the RFP:** the RFP lists 99.99% ingest as a figure proposers compete on. We commit to 99.9% for ingest and for the dashboard because that is the uptime we can operate credibly against Supabase’s published platform commitment and a two-replica app tier, without inventing multi-region active-active failover we have not costed. We will not sign a higher number than we can support.
+**Ingest 99.9% (below the RFP’s 99.99%):** we will not commit above Supabase’s published platform uptime and a two-replica app tier without inventing multi-region active-active failover we have not costed. Dashboard 99.9% meets or exceeds the RFP’s 99.90% dashboard figure.
 
-No on-call rotation and no private support desk. Incident severity is used for triage priority on the public tracker; response clocks follow the GitHub support commitment above, not a 24/7 pager.
+Support is via public GitHub issues. No mandatory on-call rotation and no private support desk. Incident severity is triage priority on that tracker; response clocks follow the 5 / 10 business-day commitment above.
+
+## Monitoring
+
+Uptime, Redis buffer depth, ingest latency, and database health are monitored, with alerts to the designated operator contact during business hours. Ops dashboards ship in the handover pack.
 
 ## Handover
 
-Any time from month 6 to month 12:
+Any time from month 6 to month 12, at SCF’s discretion:
 
 * Repository ownership moves to the operator SCF names.
 * Full Postgres dump and restore.
 * Domain transfer, or a permanent redirect from the old domain.
-* The new operator brings the system up from the monorepo. They do not need our Cloudflare or Supabase accounts.
+* The new operator brings the system up from Docker Compose / Terraform in the monorepo. They do not need our Cloudflare or Supabase accounts.
 
-The monorepo is MIT-licensed and contains the Umami fork, the collector, the tracker, Compose, Terraform, tests, the tenant guide, the operator runbook, and this privacy note.
+The monorepo is MIT-licensed and contains the Umami fork, the collector, the tracker, Compose (app + collector + Redis + Postgres), Terraform, tests, the tenant guide, the operator runbook, and the privacy note.
 
-This is a shared service on purpose, so every project is measured the same way. The software is open and rebuildable so that operation can move. The data is not a token and not a chain.
+Daily database snapshots, 30-day retention, restore test each quarter.

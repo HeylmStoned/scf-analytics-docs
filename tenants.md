@@ -1,7 +1,7 @@
 # Tenants, isolation, and keys
 
-* A Stellar project enrolls itself: name, site origin, chosen EU residency region (Frankfurt or London at launch), and one proof that it is on Stellar (a `stellar.toml` on that domain, a Soroban contract id, or an SCF project link).
-* The residency region maps to one Supabase project. That tenant’s data is written and read only there.
+* A Stellar project enrolls itself: name, site origin, and one proof that it is on Stellar (a `stellar.toml` on that domain, a Soroban contract id, or an SCF project link).
+* All tenant analytics are stored in the single Frankfurt Supabase project. There is no per-tenant region picker.
 * Enrollment does not list a project on the dashboard. Listing is separate, and SCF decides what is shown.
 * SCF operators can remove a project that is not part of the ecosystem.
 * Enrollment starts open. A single setting switches it to approval-required later. No schema change.
