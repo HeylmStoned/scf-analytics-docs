@@ -10,6 +10,7 @@ flowchart TB
   subgraph Edge["Cloudflare"]
     Script["Pinned tracker<br/>/s/vX.Y.Z/s.js + SRI"]
     Waf["DNS, TLS, WAF"]
+    Q["Cloudflare Queues<br/>durable admission"]
   end
 
   subgraph Service["SCF analytics service"]
@@ -23,7 +24,7 @@ flowchart TB
     Keys["Operator API keys<br/>create and revoke"]
   end
 
-  subgraph Data["Supabase Postgres<br/>one project per residency region"]
+  subgraph Data["Supabase Postgres<br/>one project per EU residency region"]
     WebDb[("Web aggregates")]
     ApiDb[("API aggregates<br/>24 months")]
     Rls["Row-level security<br/>tenant_id"]
@@ -31,11 +32,12 @@ flowchart TB
 
   Site --> Script
   Script --> WebIn
+  WebIn --> Q --> WebDb
   Api --> OtelIn
-  OtelIn --> Drop --> Norm --> ApiDb
-  WebIn --> WebDb
+  OtelIn --> Drop --> Norm --> Q
   WebDb --> Rls
   ApiDb --> Rls
+  Q --> ApiDb
   Rls --> TenantView
   Rls --> ScfView
   Dash --> TenantView
@@ -45,4 +47,4 @@ flowchart TB
   Waf --> OtelIn
 ```
 
-A project adds one pinned script tag for the website, and points its existing OpenTelemetry exporter at our collector as a second destination. Nothing else changes in the app. We never store their traces.
+A project adds one pinned script tag for the website, and points its existing OpenTelemetry exporter at our collector as a second destination. Nothing else changes in the app. We never store their traces. Validated events are admitted through Cloudflare Queues before Postgres so a writer outage does not drop already-accepted traffic.

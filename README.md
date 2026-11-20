@@ -7,7 +7,7 @@ Base product: **Umami** (MIT, TypeScript, Node.js, PostgreSQL). We fork it and a
 ## In this book
 
 * [System architecture](architecture.md) — one pinned script for the site, one second OpenTelemetry export for the API.
-* [Infrastructure](infrastructure.md) — Cloudflare for the tracker, two app replicas, one Supabase project per residency region.
+* [Infrastructure](infrastructure.md) — Cloudflare for the tracker and durable Queues, two app replicas, one Supabase project per EU residency region.
 * [Web analytics](web-analytics.md) — the browser script, the required metrics, bots, and the supply chain.
 * [API analytics](api-analytics.md) — what the collector keeps, and what it drops.
 * [Tenants, isolation, and keys](tenants.md) — enrollment, region pick, removal, row-level security, and operator keys.

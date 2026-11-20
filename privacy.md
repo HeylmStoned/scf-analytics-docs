@@ -1,6 +1,6 @@
 # Privacy and compliance
 
-Each enrolled project chooses a Supabase residency region at enroll. Its analytics live only in that regional Supabase project. We do not cross-replicate tenant rows between regions. Platform account, billing, and some ops telemetry may still be processed outside that region by Supabase; the Postgres analytics for the tenant stay in the chosen region. The goal is GDPR and UK PECR compliance **without** a cookie banner.
+Each enrolled project chooses a Supabase residency region at enroll. At launch residency is **EU-only** (Frankfurt or London). Its analytics live only in that regional Supabase project. We do not cross-replicate tenant rows between regions. Platform account, billing, and some ops telemetry may still be processed outside that region by Supabase; the Postgres analytics for the tenant stay in the chosen EU region. The goal is GDPR and UK PECR compliance **without** a cookie banner.
 
 * No cookies, no `localStorage`, no `sessionStorage`.
 * Stock Umami can store city, region, and ad click ids such as `gclid`. The fork keeps country and does not store city, region, or those click ids.
