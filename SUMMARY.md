@@ -1,11 +1,15 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [What works today / what’s next](status.md)
 * [System architecture](architecture.md)
 * [Infrastructure](infrastructure.md)
 * [Web analytics](web-analytics.md)
 * [API analytics](api-analytics.md)
 * [Tenants, isolation, and keys](tenants.md)
 * [Privacy and compliance](privacy.md)
+* [Privacy notice](privacy-notice.md)
 * [Operations and handover](operations.md)
+* [Contributors agreement](contributors-agreement.md)
+* [Release history](release-history.md)
 * [Plain-English stack](stack.md)
