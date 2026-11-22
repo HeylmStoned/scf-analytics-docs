@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [What works today / what’s next](status.md)
+* [Pilots](pilots.md)
 * [System architecture](architecture.md)
 * [Infrastructure](infrastructure.md)
 * [Web analytics](web-analytics.md)
