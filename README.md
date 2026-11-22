@@ -25,8 +25,8 @@ Published here and in the console repository README:
 * [Privacy and compliance](privacy.md) — Frankfurt residency, minimisation, erasure.
 * [Privacy notice](privacy-notice.md) — short tenant-facing notice.
 * [Operations and handover](operations.md) — availability table, support, handover.
-* [What works today / what’s next](status.md) — POC vs form deliverables **1.1–3.3**.
-* [Pilots](pilots.md) — Prism, Lend.xyz, and further adoption agreements.
-* [Contributors agreement](contributors-agreement.md) — how contributions are accepted.
-* [Release history](release-history.md) — team delivery history plus POC releases.
+* [What works today / what’s next](status.md) — POC scope and delivery schedule **1.1–3.3**.
+* [Pilots](pilots.md) — early adopters (Prism, Lend.xyz, and later projects).
+* [Contributors agreement](contributors-agreement.md) — contribution terms.
+* [Release history](release-history.md) — prior work and analytics POC releases.
 * [Plain-English stack](stack.md) — one-paragraph summary.
