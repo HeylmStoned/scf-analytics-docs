@@ -17,5 +17,6 @@ Open deliveries that show the team’s track record on Stellar and production fr
 | 17 November 2026 | Technical design GitBook | This book |
 | 20 November 2026 | Reviewer console | [`scf-analytics-console`](https://github.com/HeylmStoned/scf-analytics-console) — Public / SCF / Tenant modes, roadmap, GitBook link |
 | 20–22 November 2026 | Design alignment | Frankfurt residency, Redis ingest buffer, availability commitments, privacy notice, pilots, deliverables **1.1–3.3** |
+| 23 November 2026 | Tagged **v0.1.0** | First GitHub Releases on console, collector, and docs for reviewer changelog hygiene |
 
-Console changelog: [CHANGELOG.md](https://github.com/HeylmStoned/scf-analytics-console/blob/main/CHANGELOG.md).
+Console changelog: [CHANGELOG.md](https://github.com/HeylmStoned/scf-analytics-console/blob/main/CHANGELOG.md) · Releases: [console v0.1.0](https://github.com/HeylmStoned/scf-analytics-console/releases/tag/v0.1.0) · [collector v0.1.0](https://github.com/HeylmStoned/scf-analytics-poc/releases/tag/v0.1.0) · [docs v0.1.0](https://github.com/HeylmStoned/scf-analytics-docs/releases/tag/v0.1.0).
