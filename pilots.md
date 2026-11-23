@@ -16,7 +16,15 @@ The production Prism application repository stays private. Reviewers verify inst
 
 ## Lend.xyz
 
-Lend.xyz is named in the application as an early pilot alongside Prism. The public agreement record (scope — web and/or API — date, and link or message with consent) will be published on this page when it is available.
+Lend.xyz is named in the SCF application as an early web pilot alongside Prism. The Umami property for `app.lend.xyz` is registered in the operator workspace, but the production site has **not** shipped the Umami script yet — so there are still no recorded pageviews.
+
+| | |
+| --- | --- |
+| **Connection** | Web analytics (browser tracker) — agreed scope for the pilot |
+| **Instrumentation** | Not live on [app.lend.xyz](https://app.lend.xyz) yet. A Umami website for `app.lend.xyz` is already enrolled so traffic can appear as soon as the script is pinned. |
+| **Public proof** | Named pilot in the application · Umami property visible under **SCF → SCF managing** in the [reviewer console](https://scf-console-production.up.railway.app) (status: no pageviews until the script is installed) · site: [lend.xyz](https://lend.xyz) |
+
+When Lend.xyz installs the tracker, the same managing row should move from “no pageviews” to live web metrics without a new enrollment. A dated consent message or agreement link can be added here when the team publishes one; this page does not invent that record.
 
 ## Further pilots
 
