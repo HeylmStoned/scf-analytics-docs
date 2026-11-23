@@ -6,7 +6,7 @@ Open deliveries that show the team’s track record on Stellar and production fr
 
 | Project | Summary | Link |
 | --- | --- | --- |
-| **Prism** | Production DEX frontend the team builds and operates | [Prism_Mainnet](https://github.com/badbunnzcorporation-lgtm/Prism_Mainnet) |
+| **Prism** | Production DEX frontend the team builds and operates; first Pulse web + API pilot | Public proof via the [reviewer console](https://scf-console-production.up.railway.app) (private app repo) |
 | **x402 Stellar Bazaar** | Self-hostable Stellar x402 facilitator with Bazaar discovery | [x402-stellar-bazaar](https://github.com/HeylmStoned/x402-stellar-bazaar) |
 
 ## Analytics design and POC
